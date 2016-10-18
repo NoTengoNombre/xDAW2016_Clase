@@ -1,0 +1,38 @@
+<!-- 
+    @Created on : 18-oct-2016, 10:53:58
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+            fini = parseInt(prompt("Introducir fecha inicial ddmmaaaa: "));
+            ffinal = parsetInt(prompt("Introducir fecha Final ddmmaaaa: "));
+
+//            Extraccion de dias , mes y año de la fecha ddmmaaaaen fecha inicial
+            fidia = parseInt(fini / 1000000);
+            fimes = parseInt((fini - fidia * 1000000) / 10000);
+            fiano = fini - fidia * 1000000 - fimes * 10000;
+            var finicial = new Date(fiano, fimes - 1, fidia);
+
+            ffdia = parseInt(ffinal / 1000000);
+            ffmes = parseInt((ffinal - ffdia * 1000000 / 10000));
+            ffano = ffinal - ffdia * 1000000 - ffmes * 10000;
+            var fefinal = new Date(ffano, ffmes - 1, ffdia);
+
+            ndias = fefinal.getTime() - finicial - getTime();
+            ndias = ndias / 1000 / 60 / 60 / 24;
+            alert("Desde al " + finicial.toLocaleDateString() + " , al " + fefinal.toLocaleDateString() + ", han transcurrido " + ndias + " dias");
+        </script>
+
+    </body>
+</html>

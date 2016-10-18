@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href=""/> 
+        <style type="text/css">
+            div#body{
+                margin: auto;
+                width: 710px;
+            }
+
+            div#header{
+                margin:10px auto 10px auto;
+                width: 710px;
+                border: dotted 1px #CCC;
+            }
+
+            div#sidebar{
+                display:none;
+                border: solid 1px #CCC;
+            }
+
+            body.main-sidebar div#main, body.sidebar-main div#main{
+                width: 490px;
+            }
+
+            body.main-sidebar div#sidebar, body.sidebar-main div#sidebar{
+                display: block;
+                width: 200px;
+                border:solid 1px #CCC;
+            }
+            body.main-sidebar div#main, body.main-sidebar div#sidebar
+            {
+                float:left;
+                border: solid 1px #CCC;
+            }
+
+            body.sidebar-main div#main , body.sidebar-main div#sidebar{
+                float: right;
+                border: solid 1px #CCC;
+            }
+        </style>
+    </head>
+    <body class='main-sidebar'>
+        <div id="header">Cabecera : Restaurante</div>
+        <div id="body">
+            <div id="main">Este restaurante es una de las referencia gastrono </div>
+            <div id="sidebar">Menu principal</div>
+        </div>
+    </body>
+</html>

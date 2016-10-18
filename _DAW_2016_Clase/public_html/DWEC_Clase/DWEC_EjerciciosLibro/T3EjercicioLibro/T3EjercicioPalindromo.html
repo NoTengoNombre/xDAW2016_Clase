@@ -1,0 +1,35 @@
+<!-- 
+    @Created on : 18-oct-2016, 11:56:20
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+            var cadena = prompt("Ingrese una palabra: ");
+            var mitarriba = Math.ceil(cadena.length / 2);
+            var mitabajo = Math.floor(cadena.length / 2 - 1);
+//          alert(mitarriba + " " + mitabajo);
+            var i = 0;
+//                     principio                              final
+            while (cadena.substring(mitarriba + i, 1) == cadena.substr(mitabajo - i, 1))
+            {
+                i = i + 1;
+            };
+            if (mitarriba + i == cadena.length) {
+                alert(cadena + " es palindromo");
+            } else {
+                alert(cadena + " no es palidromo");
+            }
+        </script>
+    </body>
+</html>

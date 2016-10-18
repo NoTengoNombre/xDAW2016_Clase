@@ -1,0 +1,39 @@
+<!-- 
+    @Created on : 18-oct-2016, 10:53:58
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+            
+            var fini = 0;
+            var fidia = 0;
+            var fimes = 0;
+            var fiano = 0;
+            
+            fini = parseInt(prompt("Introduce fecha inicial ddmmaaaa"));
+
+            fidia = parseInt(fini / 1000000);
+            fimes = parseInt((fini - fidia * 1000000) / 10000);
+            fiano = fini - fidia * 1000000 - fimes * 10000;
+            test = (fidia > 31 || fidia < 1 || fimes < 1 || fimes > 12) + (fidia == 29 && fimes == 2 && (fiano % 100 == 0 && fiano % 400 != 0
+                    || fiano % 4 != 0)) + (fidia == 31 && (fimes == 2 || fimes == 4 || fimes == 6 || fimes == 9 || fimes == 11)) + (fidia == 30 && fimes == 2);
+            if (test) {
+                alert("Fecha invalida");
+            } else {
+                alert("dia " + fdia + " mes " + fimes + " anio " + " " + test);
+            }
+        </script>
+
+    </body>
+</html>
