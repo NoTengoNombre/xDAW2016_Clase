@@ -1,0 +1,37 @@
+<!-- 
+    @Created on : 20-oct-2016, 8:41:28
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+
+        <h1>No define posicion</h1>
+
+        <div style="background-color: #ff0000; color:#ffc; padding:10px; text-align: center; width: 300px;">
+            • No define posicion , por lo que es static
+        </div>
+
+        <div style="position: absolute; width: 300px; padding: 10px; background-color: #066; text-align: right; color: #ffc; top:100px; left: 300px;">○ Capa Absoluta (solo tiene como contenedor a 'body' ) por lo tanto se relativa a body</div>
+
+        <div style="position: relative; width: 300px; padding: 10px; background-color: #033; color: #ffc; top:0px; left:30px;"> ♦ Capa Relative : de posicionamiento relative , Se coloca segun la posicion que le tocaria en el flujo HTML</div>
+
+        <div style="position: static; width: 300px; padding: 10px; background-color: #096; color: #ffc; top:10px; left:30px;"> ♠ Capa Static : No tiene en cuenta los atributos - Capa Fija se coloca como una absoluta</div>
+
+        <div style="position: absolute; width: 350px; height: 100px; padding: 10px; background-color: #666; text-align: right; color: #ffc; top:300px; left:500px;">
+            <div style="position:absolute; width: 300px; padding: 10px ; background-color: #111; text-align: right; color: turquoise; top:0px; left: 5px;">○ Capa Absoluta , se referencia segun a su contenedor porque no es una static</div>
+        </div>
+        
+        <h2>La ultima en ponerse</h2>
+    
+    </body>
+</html>
