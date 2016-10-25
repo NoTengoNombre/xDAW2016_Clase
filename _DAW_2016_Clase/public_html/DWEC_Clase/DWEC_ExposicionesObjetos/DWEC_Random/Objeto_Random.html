@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+        <script>
+            var i;
+            function num_aleatorio() {
+                for (i = 0; i < 10; i++) {
+                    var xx = Math.random();
+                    document.write("<br /> valor : " + xx);
+                document.write("<button onclick='recarga()'>B</button>");
+                }
+//                document.write("<button onclick='recarga()'>B</button>");
+            }
+
+            function recarga() {
+                window.location.reload();
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <button onclick="num_aleatorio()">B</button>
+        </div>
+    </body>
+</html>

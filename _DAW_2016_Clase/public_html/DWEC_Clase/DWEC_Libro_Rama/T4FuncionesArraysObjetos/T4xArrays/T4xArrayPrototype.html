@@ -17,11 +17,14 @@
         <script>
 
             var paginas_comerciales = new Array();
-            Array.prototype.dominio = ".com";
+            Array.prototype.dominio = ".com"; // ha creado una propiedad del objeto
 
-            Array.prototype.dominio = "com";
-            Array.prototype.pepe = 1;
+            var paginas_gubernamentales = new Array();
+            paginas_gubernamentales.dominio = ".gov"; // renombra la propiedad del objeto
 
+            document.write("Extension de las paginas comerciales: " + paginas_comerciales.dominio);
+            document.write("<br>");
+            document.write("Extension de las paginas gubernamentales " + paginas_gubernamentales.dominio);
 
             var codigo_productos = new Array();
             for (var i = 0; i < dominio.length; i++) {

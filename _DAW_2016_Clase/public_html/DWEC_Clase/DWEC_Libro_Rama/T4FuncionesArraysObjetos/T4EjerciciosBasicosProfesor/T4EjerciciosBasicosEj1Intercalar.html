@@ -1,0 +1,45 @@
+<!-- 
+    @Created on : 25-oct-2016, 10:21:46
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : Dados 2 vectores de igual dimension intercalarlos en un tercero
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <h3>Dados 2 vectores de igual dimension intercalarlos en un tercero </h3>
+        <script>
+            var cadena = new Array(10);
+//                                   0    1    2    3    4    5    6   7     8    9  
+            var cadena2 = new Array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j');
+
+            var c = 0;
+            for (var i = 0; i < cadena.length; i++) {
+                document.write(cadena[i] = c++);
+            }
+
+            document.write("<hr>");
+
+            for (var i = 0; i < cadena2.length; i++) {
+                document.write(cadena2[i]);
+            }
+
+            document.write("<hr>");
+
+            var suma_cadenas = parseInt(cadena.length + cadena2.length);
+            document.write("Longitud total : " + suma_cadenas);
+
+            var unir = new Array(suma_cadenas);
+            var fusion = unir.concat(cadena, cadena2);
+            document.write("<br>" + fusion);
+
+        </script>
+    </body>
+</html>
