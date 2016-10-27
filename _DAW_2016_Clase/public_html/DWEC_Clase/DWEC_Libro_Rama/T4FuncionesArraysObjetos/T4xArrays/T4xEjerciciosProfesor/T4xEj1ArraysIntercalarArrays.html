@@ -29,9 +29,16 @@
             }
 
             var longitud = numeros.length + cadena.length;
-            document.write("<br><br>• Longitud : " + longitud);
-            
-            
+            document.write("<br><br>• Longitud : " + longitud + "<br>" + "<br>");
+
+            var unir = new Array();
+            unir = numeros.concat(cadena);
+
+            document.write("• Cadena unida: <br><br>");
+            for (var i = 0; i < unir.length; i++) {
+                document.write(unir[i]);
+            }
+
 
 
 
