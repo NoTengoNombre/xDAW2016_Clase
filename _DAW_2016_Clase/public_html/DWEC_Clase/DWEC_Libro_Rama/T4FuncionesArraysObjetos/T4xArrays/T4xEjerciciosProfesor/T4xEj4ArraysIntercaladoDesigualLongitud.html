@@ -1,0 +1,66 @@
+<!-- 
+    @Created on : 25-oct-2016, 12:07:52
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : Partiendo de 2 vectores clasificados en orden ascendente , debemos conseguir un 
+                  tercero que incluyan el contenido de los clasificados ascesdentemente.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+            var nombres2 = new Array('Ana', 'Juan', 'Eva', 'Maria', 'Luisa', 'Andrea');
+            var nombres2 = new Array('Arancha', 'Nuria', 'Carmen', 'Clara', 'Beatriz', 'Leonor');
+            var nombres3 = new Array();
+
+            var vueltas = 0;
+            var menor = 0;
+            var inicio = 0;
+
+            if (nombres1.length < nombres2.length) {
+                vueltas = nombres1.length;
+                menor = 1;
+            } else {
+                vueltas = nombres2.length;
+                menor = 2;
+            }
+
+            for (var i = 0; i < vueltas; i++) {
+                nombres3[2 * i] = nombres1[i];
+                nombres3[2 * i + 1] = nombres2[i];
+            }
+
+            inicio = i;
+
+            if (menor == 2) {
+                for (var i = inicio; i < nombres1.length; i++) {
+                    nombres3[inicio + i] = nombres1[i];
+                }
+            }
+
+            if (menor == 1) {
+                for (var i = inicio; i < nombres1.length; i++) {
+                    nombres3[inicio + i] = nombres1[i];
+                }
+            }
+
+            if (menor == 1) {
+                for (var i = 0; i < nombres3.length; i++) {
+                    document.write("<br>" + nombres3[i]);
+                }
+            }
+
+            document.write("<hr>");
+            document.write(nombres3);
+            document.write("<hr>");
+
+        </script>
+    </body>
+</html>
