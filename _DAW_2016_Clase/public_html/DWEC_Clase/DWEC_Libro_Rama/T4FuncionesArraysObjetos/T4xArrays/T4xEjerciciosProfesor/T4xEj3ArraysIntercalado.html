@@ -1,0 +1,44 @@
+<!-- 
+    @Created on : 25-oct-2016, 12:07:52
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : Partiendo de 2 vectores clasificados en orden ascendente , debemos conseguir un 
+                  tercero que incluyan el contenido de los clasificados ascesdentemente.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+            var nombres1 = new Array('Ana', 'Juan', 'Eva', 'Maria', 'Luisa', 'Andrea');
+            var nombres2 = new Array('Arancha', 'Nuria', 'Carmen', 'Clara', 'Beatriz', 'Leonor');
+            var nombres3 = new Array();
+
+//            nombres1 = nombres1.sort();
+//            nombres1 = nombres2.sort();
+
+            for (var i = 0; i < nombres1.length; i++) {
+                nombres3[2 * i] = nombres1[i];
+                nombres3[2 * i + 1] = nombres2[i];
+            }
+
+            document.write("<hr>");
+            document.write(nombres3);
+            document.write("<hr>");
+
+//            for (var i = 0; i < max; i++) {
+//                document.write("<br>" + nombres3[i]);
+//            }
+
+            for (var i = 0; i < nombres3.length; i++) {
+                document.write('<br> ' + i + ' ' + nombres3[i]);
+            }
+        </script>
+    </body>
+</html>
