@@ -1,0 +1,51 @@
+<!-- 
+    @Created on : 02-nov-2016, 8:46:47
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+
+            function Coche(marca_in, modelo_in, anyo_in) {
+                this.marca = marca_in;
+                this.modelo = modelo_in;
+                this.anyo = anyo_in;
+            }
+
+            var mi_coche = new Coche("Peugout", "206cc", "2003");
+// Añadir un atributo a la Clase Coche
+            mi_coche.color = "Azul";
+
+            function Concesionario(cod_oficina_in, ciudad_in, responsable_in) {
+                this.cod_oficina = cod_oficina_in;
+                this.ciudad = ciudad_in;
+                this.responsable = responsable_in;
+            }
+
+            function Coche(marca_in, modelo_in, anyo_in, concesionario_in) {
+                this.marca = marca_in;
+                this.modelo = modelo_in;
+                this.anyo = anyo_in;
+                this.concesionario = concesionario_in;
+            }
+
+            var concesionario_atocha = new Concesionario('281', 'Madrid', 'Pedro Bravo');
+
+            var mi_coche = new Coche('Citroen', 'C4', '2010', concesionario_atocha);
+
+// 
+//            function imprime
+
+        </script>
+    </body>
+</html>

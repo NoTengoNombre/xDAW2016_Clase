@@ -1,0 +1,42 @@
+<!-- 
+    @Created on : 02-nov-2016, 8:46:47
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <script>
+
+            function Coche(marca_in, modelo_in, anio_in) {
+                this.marca = marca_in;
+                this.modelo = modelo_in;
+                this.anio = anio_in;
+            }
+
+            var coches = new Array(4);
+            coches[0] = new Coche("Ferrary 1", "Scaglietti 1 ", "2011");
+            coches[1] = new Coche("Ferrary 2", "Scaglietti 2", "2012");
+            coches[2] = new Coche("Ferrary 3", "Scaglietti 3", "2013");
+            coches[3] = new Coche("Ferrary 4", "Scaglietti 4", "2014");
+
+            for (var i = 0; i < coches.length; i++) {
+                document.write(i + "- Marca : "
+                        + coches[i].marca + " - Modelo : "
+                        + coches[i].modelo + " - Fecha de Fabricacion : "
+                        + coches[i].anio + "<br>");
+            }
+
+
+
+        </script>
+    </body>
+</html>
