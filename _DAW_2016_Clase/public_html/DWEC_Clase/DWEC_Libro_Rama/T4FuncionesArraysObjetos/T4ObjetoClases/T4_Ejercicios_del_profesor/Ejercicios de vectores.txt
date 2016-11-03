@@ -1,0 +1,16 @@
+-Dados dos vectores de igual dimensión intercalarlos en un tercero.
+
+-Dados dos vectores de dimensiones desiguales intercalarlos en un tercero. Añadiendo los elementos sobrantes al final
+
+-Partiendo de dos vectores clasificados en orden ascendente, debemos conseguir un tercero que incluya el contenido de los dos clasificado ascendentemente.
+
+-Partiendo de dos vectores clasificados en orden ascendente, debemos conseguir un tercero que incluya el contenido de los dos clasificado descendentemente.
+- Partiendo de 3 vectores clasificados, fusionarlos en un cuarto ordenado conservando los 3 vectores iniciales.
+
+-Efectuar las variaciones correspondientes en los 3 últimos ejercicios para que sea tenido en cuenta el carácter ñ, debiendo este estar entre la n y la o.
+
+-Disponemos de una matriz de 10x2. Construye un programa que me permita introducir valores numéricos enteros en la todas las casillas de la citada matriz. Lleve a cabo una clasificación por columnas ascendente. Por ultimo debemos añadir una tercera columna que albergará la suma de los elementos de la misma fila que se encuentran en las 2 primeras columnas. 
+
+-Construye un programa javascript que almacene los datos de los alumnos de 2º DAW, la información que barajaremos por alumno es: apellidos-nombre, dirección, número de teléfono y edad. Nuestro programa debe ser capaz de mostrar los datos de los distintos alumnos ordenados por nombre, por edad o por número de teléfono.
+
+-Tomando como referencia el programa resolutivo del ejercicio anterior, haz que dado un nombre o un número de teléfono nos muestre la ficha de la persona buscada. 

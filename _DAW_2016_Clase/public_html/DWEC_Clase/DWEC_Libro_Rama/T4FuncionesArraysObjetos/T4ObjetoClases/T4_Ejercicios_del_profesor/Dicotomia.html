@@ -1,0 +1,25 @@
+MAYOR <---- indice mayor del array
+MENOR <---- 0
+MITAD <---- 0
+ELEBUSCADO <-- valor a buscar en el array
+ENCONTRADO <-- 0
+
+mientras MENOR<=MAYOR  y ENCONTRADO=0
+	MITAD=(MAYOR+MENOR)\2
+	si array(MITAD)>ELEBUSCADO
+	         MAYOR=MITAD-1
+		si no 
+			si array(MITAD)<ELEBUSCADO
+				     MENOR=MITAD+1 
+				si no
+				     ENCONTRADO=1
+			fin si
+		fin si
+	fin si	
+fin mientras	
+
+si ENCONTRADO=1
+		 alert(array[ENCONTRADO])
+	si no
+	     alert('NO EXISTE')
+fin si	

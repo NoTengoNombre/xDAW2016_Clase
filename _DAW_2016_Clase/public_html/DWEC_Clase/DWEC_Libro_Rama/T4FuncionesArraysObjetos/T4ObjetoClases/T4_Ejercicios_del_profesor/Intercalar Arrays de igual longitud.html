@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Intercalacion de los elementos de dos array de igual longitud en un tercero </title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nombres1 = new Array('Ana','Juan','Eva','Maria','Luisa','Andrea');
+		var nombres2 = new Array('Arancha','Nuria','Carmen','Clara','Beatriz','Leonor');
+		var nombres3 = new Array();
+		//nombres1=nombres1.sort();
+		//nombres2=nombres2.sort();
+		for(i=0; i<nombres1.length; i++){
+		    nombres3[2*i]=nombres1[i];
+			nombres3[2*i+1]=nombres2[i];
+		}
+		alert (nombres3);
+		for(i=0; i<nombres3.length;i++){
+		    document.write("<br>" + nombres3[i]);
+		}
+	</script>
+</body>
+</html> 
+

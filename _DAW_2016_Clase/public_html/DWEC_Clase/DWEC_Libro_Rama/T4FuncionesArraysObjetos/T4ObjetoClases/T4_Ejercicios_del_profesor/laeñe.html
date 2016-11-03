@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	/* hay que revisar la codificacion utf-8 */	 
+	<title>La Eñe</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var letras = " abcdefghijklmnñopqrstuvwxyz";
+		palabra1 = prompt("Introduzca la primera palabra ");
+		palabra2 = prompt("Introduzca la segunda palabra ");
+		
+		i=0;
+		do
+		{
+			
+			var a=letras.search(palabra1[i]);
+			var b=letras.search(palabra2[i]);
+			
+			salir=0;
+			if (a<b){
+			          salir=1;
+			}else {
+					if (a>b){
+					           salir=2;
+					}else{
+							i++;
+					}
+			};
+			
+			
+			alert ("salir = " + salir + " " + a + "   " + b + "   letras = " +  palabra1[i-1] + "   " + palabra2[i-1]);
+		}	
+		while (salir == 0  &&  i <= palabra1.length)
+
+	</script>
+</body>
+</html>
