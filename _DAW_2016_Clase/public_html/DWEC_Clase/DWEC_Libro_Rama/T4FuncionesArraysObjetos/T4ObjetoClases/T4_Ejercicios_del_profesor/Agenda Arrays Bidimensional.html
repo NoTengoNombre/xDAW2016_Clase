@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	<title>Agenda Array Bidimensional</title>
-</head>
-<body>
-	<script type="text/javascript">
-		// Falta todo el proceso de busqueda
-		// ----------------------------------
-		var nombres = new Array('Maria','Beatriz','Claudia','Natalia','Maricruz','Mireia','Elena','Paula','Maria del Mar','Alicia','Marta','Felix','Juan Carlos','Raul');
-		var telefonos = new Array('667900345','665989434','609878888','950232681','950265167','950233443','656432555','912345678','912860970','637900345','635989434','669090062','930232681','677876910');
-		var ciudades = new Array('Madrid','Barcelona','Cuenca','Navarra','Mallorca','Menorca','Sevilla','Palencia','Murcia','Granada','Valencia','Almeria','Jaen','Oviedo');
-		var agenda = new Array(nombres, telefonos, ciudades);
-		//alert(agenda[0][0]);
-		var nombresinordenar= new Array();
-		var telefonosinordenar= new Array();
-		var ciudadesinordenar= new Array();
-		var agendasinordenar = new Array(nombresinordenar, telefonosinordenar, ciudadesinordenar);
-		var hombre,tope,topebucle,numero;
-		topebucle=nombres.length-1;
-		for(i=0; i<=topebucle; i++){
-			//document.write("<br>" + ciudades[i] );
-			//mujer=agenda[0][i].substring(2);
-		  nombresinordenar[i]=nombres[i];
-		  telefonosinordenar[i]=telefonos[i]; 	
-		  ciudadesinordenar[i]=ciudades[i]; 
-		  for(j=0; j<=2; j++){	
-			agenda[j][i] = agenda[j][i].concat("                    ");
-			agenda[j][i] = agenda[j][i].substring(0,20);
-			agenda[j][i] = agenda[j][i].concat(i);
-		  }; 	
-			//document.write("<br>" + agenda[0][i] + " -- " + agenda[1][i] + " -- " +agenda[2][i] );
-			//mujer=agenda[0][i].substring(20);
-			//alert(mujer);
-		};
-		for(j=0; j<=2; j++){	
-			agenda[j]=agenda[j].sort();
-			//alert(agenda[j]);
-		}; 
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <title>Agenda Array Bidimensional</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Falta todo el proceso de busqueda
+            // ----------------------------------
+            var nombres = new Array('Maria', 'Beatriz', 'Claudia', 'Natalia', 'Maricruz', 'Mireia', 'Elena', 'Paula', 'Maria del Mar', 'Alicia', 'Marta', 'Felix', 'Juan Carlos', 'Raul');
+            var telefonos = new Array('667900345', '665989434', '609878888', '950232681', '950265167', '950233443', '656432555', '912345678', '912860970', '637900345', '635989434', '669090062', '930232681', '677876910');
+            var ciudades = new Array('Madrid', 'Barcelona', 'Cuenca', 'Navarra', 'Mallorca', 'Menorca', 'Sevilla', 'Palencia', 'Murcia', 'Granada', 'Valencia', 'Almeria', 'Jaen', 'Oviedo');
+            var agenda = new Array(nombres, telefonos, ciudades); // Crear una matriz
+//            cada fila corresponde con cada columna
+            nombres.length
+//                  agenda[x][y];
+            //alert(agenda[0][0]);
+            var nombresinordenar = new Array();
+            var telefonosinordenar = new Array();
+            var ciudadesinordenar = new Array();
+            var agendasinordenar = new Array(nombresinordenar, telefonosinordenar, ciudadesinordenar);
+            var hombre, tope, topebucle, numero;
+            topebucle = nombres.length - 1;
+            for (i = 0; i <= topebucle; i++) {
+                //document.write("<br>" + ciudades[i] );
+                //mujer=agenda[0][i].substring(2);
+                nombresinordenar[i] = nombres[i];
+                telefonosinordenar[i] = telefonos[i];
+                ciudadesinordenar[i] = ciudades[i];
+                for (j = 0; j <= 2; j++) {
+                    agenda[j][i] = agenda[j][i].concat("                    ");
+                    agenda[j][i] = agenda[j][i].substring(0, 20);
+                    agenda[j][i] = agenda[j][i].concat(i);
+                }
+                ;
+                //document.write("<br>" + agenda[0][i] + " -- " + agenda[1][i] + " -- " +agenda[2][i] );
+                //mujer=agenda[0][i].substring(20);
+                //alert(mujer);
+            }
+            ;
+            for (j = 0; j <= 2; j++) {
+                agenda[j] = agenda[j].sort();
+                //alert(agenda[j]);
+            }
+            ;
 
-		//alert(nombresinordenar);
-		//alert(agendasinordenar);
-		
-		for(j=0; j<=2; j++){	
-		    document.write("<br><br>" + "Ordenado por" + (j+1)+ " campo" + "<br>" );
-			for(i=0; i<=topebucle; i++){
-				numero=agenda[j][i].substring(20);
-				document.write("<br>" + agendasinordenar[0][numero] + " -- " + agendasinordenar[1][numero] + " -- " +agendasinordenar[2][numero] );
-			};
-		};
-		
-		
-	</script>
-</body>
+            //alert(nombresinordenar);
+            //alert(agendasinordenar);
+//            Mostrar el array
+            for (j = 0; j <= 2; j++) {
+                document.write("<br><br>" + "Ordenado por" + (j + 1) + " campo" + "<br>");
+                for (i = 0; i <= topebucle; i++) {
+                    numero = agenda[j][i].substring(20);
+                    document.write("<br>" + agendasinordenar[0][numero] + " -- " + agendasinordenar[1][numero] + " -- " + agendasinordenar[2][numero]);
+                }
+                ;
+            }
+            ;
+
+
+        </script>
+    </body>
 </html> 
 
