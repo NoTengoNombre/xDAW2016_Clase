@@ -1,3 +1,4 @@
+<!--Esta parte esta ejecutada en el servidor  -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +14,8 @@
             var ciudades = new Array('Madrid', 'Barcelona', 'Cuenca', 'Navarra', 'Mallorca', 'Menorca', 'Sevilla', 'Palencia', 'Murcia', 'Granada', 'Valencia', 'Almeria', 'Jaen', 'Oviedo');
             var agenda = new Array(nombres, telefonos, ciudades); // Crear una matriz
 //            cada fila corresponde con cada columna
-            nombres.length
+            var long_nombre = nombres.length;
+            document.write("Longitud de todos los arrays : " + long_nombre);
 //                  agenda[x][y];
             //alert(agenda[0][0]);
             var nombresinordenar = new Array();
@@ -22,6 +24,7 @@
             var agendasinordenar = new Array(nombresinordenar, telefonosinordenar, ciudadesinordenar);
             var hombre, tope, topebucle, numero;
             topebucle = nombres.length - 1;
+
             for (i = 0; i <= topebucle; i++) {
                 //document.write("<br>" + ciudades[i] );
                 //mujer=agenda[0][i].substring(2);
@@ -29,8 +32,11 @@
                 telefonosinordenar[i] = telefonos[i];
                 ciudadesinordenar[i] = ciudades[i];
                 for (j = 0; j <= 2; j++) {
+//                                                    ("12345678901234567891");
                     agenda[j][i] = agenda[j][i].concat("                    ");
-                    agenda[j][i] = agenda[j][i].substring(0, 20);
+                    agenda[j][i] = agenda[j][i].substring(0, 20); // para saber donde va a ir el numero de cada nombre porque coge el 20 caracteres y el numero corresponde al 21 -> 
+                    //Maria - 0 
+                    //Beatriz - 1
                     agenda[j][i] = agenda[j][i].concat(i);
                 }
                 ;
@@ -39,17 +45,18 @@
                 //alert(mujer);
             }
             ;
+//            Ordenacion por el indice de las columnas
             for (j = 0; j <= 2; j++) {
                 agenda[j] = agenda[j].sort();
                 //alert(agenda[j]);
             }
             ;
 
-            //alert(nombresinordenar);
-            //alert(agendasinordenar);
+//            alert(nombresinordenar);
+//            alert(agendasinordenar);
 //            Mostrar el array
             for (j = 0; j <= 2; j++) {
-                document.write("<br><br>" + "Ordenado por" + (j + 1) + " campo" + "<br>");
+                document.write("<br><br>" + "Ordenado por " + (j + 1) + " campo" + "<br>");
                 for (i = 0; i <= topebucle; i++) {
                     numero = agenda[j][i].substring(20);
                     document.write("<br>" + agendasinordenar[0][numero] + " -- " + agendasinordenar[1][numero] + " -- " + agendasinordenar[2][numero]);
