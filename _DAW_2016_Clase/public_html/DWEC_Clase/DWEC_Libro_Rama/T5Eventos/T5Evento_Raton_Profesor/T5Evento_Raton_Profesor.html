@@ -1,0 +1,107 @@
+<!-- 
+    @Created on : 07-nov-2016, 9:54:47
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <style scoped="">
+      body {
+        font-family: arial , helvetica;
+      }
+      #info {
+        width: 160px;
+        border: thin solid silver;
+        padding : .5em;
+        position: fixed;
+      }
+      #info h1{
+        margin: 0;
+      }
+    </style>
+
+    <script>
+      function informacion(elEvento) {
+        var evento = elEvento || window.event;
+
+        var coordenadaX = evento.clientX;
+        var coordenadaY = evento.clientY;
+        if (evento.type === 'click') {
+          alert(evento.type);
+        }
+        ;
+
+        var dimeniones = tamanoVentanaNavegador();
+        var tamanoX = dimensiones[0];
+        var tamanoY = dimensiones[1];
+
+        var posicionHorizontal = "";
+        var posicionVertical = "";
+
+        if (coordenadaX > tamanoX / 2) {
+          posicionHorizontal = "derecha";
+        } else {
+          posicionHorizontal = "izquierda";
+        }
+
+        if (coordenadasY > tamanoY / 2) {
+          posicionVertical = "abajo";
+        } else {
+          posicionVertical = "arriba";
+        }
+
+        muestraInformacion(['Posicion', posicionHorizontal, posicionVertical]);
+      }
+
+      function muestraInformacion(mensaje) {
+        document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+        for (var i = 1; i < mensaje.length; i++) {
+          document.getElementById("info").innerHTML += '<p>' + mensaje[i] + '</p>';
+        }
+      }
+
+      function muestraInformacion(mensaje) {
+        document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+        for (var i = 1; i < mensaje.length; i++) {
+          document.getElementById("info").innerHTML += '<p>' + mensaje[1] + '</p>';
+        }
+      }
+
+      function muestraInformacion(mensaje) {
+        document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+        for (var i = 0; i < mensaje.length; i++) {
+          document.getElementById("info").innerHTML += '<p>' + mensaje[1] + '</p>';
+        }
+      }
+
+      function tamanoVentanaNavegador() {
+        var dimensiones = [];
+        if (typeof (window.innerWidth) === 'number') {
+          dimensiones = [window.innerWidth, window.innerHeight];
+        } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+          dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+        } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+          dimensiones = [document.body.clientWidth, document.body.clientHeight];
+        }
+        return dimensiones;
+      }
+
+      document.onclick = informacion;
+      document.onmousemove = infomacion;
+
+    </script>
+    <div id="info"></div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>    
+  </body>
+</html>
