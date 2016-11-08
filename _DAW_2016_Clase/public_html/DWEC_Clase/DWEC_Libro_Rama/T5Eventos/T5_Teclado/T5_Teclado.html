@@ -1,0 +1,51 @@
+<!-- 
+    @Created on : 08-nov-2016, 10:59:09
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+      function limita(elEvento, maximocaracteres) {
+        var elemento = document.getElementById("texto");
+
+        var evento = elEvento || window.event;
+        var codigoCaracteres = evento.charCode || evento.keyCode;
+
+        if (codigoCaracteres == 37 || codigoCaracteres == 39) {
+          return true;
+        }
+
+        if (codigoCaracteres == 8 || codigoCaracteres == 46) {
+          return true;
+        } else if (elemento.value.length >= maximocaracteres) {
+          return false;
+        } else {
+          return false;
+        }
+      }
+
+      function actualizaInfo(maximocaracteres) {
+        var elemento = document.getElementById("texto");
+        var info = document.getElementById("info");
+
+        if (elemento.value.length >= maximocaracteres) {
+          info.innerHTML = "Maximio " + maximocaracteres + " caracteres";
+        } else {
+          info.innerHTML = "Puedes hasta " + (maximocaracteres = elemento.value.length) + " caracteres adicionales";
+        }
+      }
+
+    </script>
+    <textarea id="texto" onclick="actualizaInfo('texto')" ></textarea>
+  </body>
+</html>

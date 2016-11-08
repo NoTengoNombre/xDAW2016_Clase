@@ -12,25 +12,26 @@ body {font-family: arial, helvetica;}
  
 <script type="text/javascript">
 function informacion(elEvento) {
-  var evento = elEvento || window.event;
+  var evento = elEvento || window.event; // para explores 
  
-  var coordenadaX = evento.clientX;
+  var coordenadaX = evento.clientX; // 
   var coordenadaY = evento.clientY;
   if (evento.type == "click"){ alert (evento.type)};  
   var dimensiones = tamanoVentanaNavegador();
   var tamanoX = dimensiones[0];
   var tamanoY = dimensiones[1];
  
-  var posicionHorizontal = "";
-  var posicionVertical = "";
+ // Son Variables globales
+  //var posicionHorizontal = "";
+  //var posicionVertical = "";
  
-  if(coordenadaX > tamanoX/2) {
-    posicionHorizontal = "derecha";
+  if(coordenadaX > tamanoX/2) { // tamano por 2 esta a la derecha
+   var posicionHorizontal = "derecha";
   }
   else {
-    posicionHorizontal = "izquierda";
+   var posicionHorizontal = "izquierda";
   }
- 
+ // tamano por 2 esta a la izquierda
   if(coordenadaY > tamanoY/2) {
     posicionVertical = "abajo";
   }
@@ -48,6 +49,7 @@ function muestraInformacion(mensaje) {
   }
 }
  
+ // Parte para IE
 function tamanoVentanaNavegador(){
   // Adaptada de http://www.howtocreate.co.uk/tutorials/javascript/browserwindow
   var dimensiones = [];
