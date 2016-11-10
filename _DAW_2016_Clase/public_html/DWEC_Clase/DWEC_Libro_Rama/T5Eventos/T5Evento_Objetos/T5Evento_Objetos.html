@@ -1,0 +1,42 @@
+<!-- 
+    @Created on : 09-nov-2016, 8:51:11
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <script>
+      window.onlad = function () {
+        var enlace = document.getElementsByName('a');
+        for (i in enlaces) {
+          enlaces[i].onclick = muestraOculta;
+        }
+      };
+      
+      function muestraOculta(){
+        var idEnlace = this.id;
+        var trozos = idEnlace.split('_');
+        var numero = trozos[i];
+        var parrafo = document.getElementById('contenido_' + numero);
+        
+        switch(parrafo.style.display){
+          case 'none':
+            parrafo.style.display = 'block';
+            this.innerHTML = 'Ocultar contenidos';
+            break;
+          case '':
+            parrafo.
+        }
+      }
+    </script>
+  </body>
+</html>
