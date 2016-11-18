@@ -1,0 +1,37 @@
+<!-- 
+    @Created on : 14-nov-2016, 8:27:38
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      function validaDNI() {
+        valor = document.getElementById("dni").value;
+        }
+
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+        if (!(/^\d{8}[A-Z]$/.test(valor))) {
+          return false;
+        }
+
+        if (valor.charAt(8) !== letras[(valor.substring(0, 8)) % 23]) {
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

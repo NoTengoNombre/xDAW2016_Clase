@@ -1,0 +1,53 @@
+<!-- 
+    @Created on : 15-nov-2016, 10:56:51
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript" src="jquery-1.6.4.js"></script>
+
+    <style media="screen">
+      body{
+        background: #666;
+      }
+      h1{
+        color: #00CC00;
+      }
+      .misdivs {background : #623;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Titulo</h1>
+    <div class="misdivs">Mi div 1</div>
+    <div class="misdivs2">Mi div 2</div>
+    <div class="misdivs3">Mi div 2</div>
+
+    <script type="text/javascript">
+      var ocultar = function () {
+        $(".misdivs").css({background: "#00ff00"});
+        $(".misdivs").fadeIn(2000);
+      };
+
+// Lanzando evento Ready - hasta que no se carga la estructura de DOM
+      $(document).ready(function () {
+        $(".misdivs").fadeOut(2000).css({background: "blue"}).fadeIn(2000);
+        $(".misdivs2").fadeOut(2000, function () {
+          $(".misdivs2").css({background: "red"});
+          $(".misdivs2").fadeIn(2000);
+        });
+        $(".misdivs3").fadeOut(2000, ocultar);
+      });
+
+    </script>
+  </body>
+</html>

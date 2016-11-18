@@ -1,0 +1,41 @@
+<!-- 
+    @Created on : 15-nov-2016, 10:56:51
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      body{
+        background: #666;
+      }
+    </style>
+    <script src="jquery-1.6.4.js">
+      $(document).ready(function () {
+      var funcionQueManeja = function () {
+      if ($(this).css("color") != "rgb(250,0,0)") {
+      $(this).css("color", "rgb(255,0,0)");
+      } else {
+      $(this).css("color", "rgb(0,0,255");
+      }
+
+      $("p").bind("click mouseenter mouseleave", funcionQueManeja);
+              $("#desactivar-evento").bind("click", function () {
+      $("p").unbind("click", funcionQueManeja);
+      })
+      };
+    </script>
+  </head>
+  <body>
+
+    <p>El texto cambia de color al entrar o salir con el raton o hacer click</p>
+    <input id="desactivar-evento" type="button" value="Quitar el cambio de color cuando se hace click">
+  </body>
+</html>

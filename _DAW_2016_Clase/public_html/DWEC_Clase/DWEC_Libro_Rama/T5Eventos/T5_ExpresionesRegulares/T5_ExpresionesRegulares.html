@@ -1,0 +1,32 @@
+<!-- 
+    @Created on : 14-nov-2016, 8:27:38
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+
+
+      function validaEmail() {
+        valor = document.getElementById("campo").value;
+
+        if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor))) {
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="validaEmail()">B</button>
+  </body>
+</html>

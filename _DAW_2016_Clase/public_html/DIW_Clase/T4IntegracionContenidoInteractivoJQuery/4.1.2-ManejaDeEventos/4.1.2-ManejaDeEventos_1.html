@@ -1,0 +1,36 @@
+<!-- 
+    @Created on : 15-nov-2016, 10:56:51
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="jquery-1.6.4.js">
+      var poner_Rojo = function () {
+        $(this).css("color", "rgb(255,0,0)");
+      };
+      var poner_Azul = function () {
+        $(this).css("color", "rgb(0,0,255)");
+      };
+      $(document).ready(function () {
+        $("p").toggle(poner_Rojo, poner_Azul);
+      });
+    </script>
+    <style media="screen">
+      body{
+        background: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>El texto cambia de color al entrar o salir con el raton o hacer click</p>
+  </body>
+</html>

@@ -18,8 +18,6 @@
         {apellidos: "Garcia Jerez", nombre: "Alvaro", ciudad: "Barcelona", telefono: 678234234, edad: 30},
       ];
 
-
-
       alumnos.sort(function (a, b) {
         var x = a.apellidos.toLowerCase();
         var y = b.apellidos.toLowerCase();
@@ -33,10 +31,10 @@
       });
 
       document.write(
-              "Ordenar por apellidos:\n" +
-              alumnos[0].apellidos + " " + alumnos[0].nombre + " " + alumnos[0].ciudad + " " + alumnos[0].telefono + " " + alumnos[0].edad + "\n" +
-              alumnos[1].apellidos + " " + alumnos[1].nombre + " " + alumnos[1].ciudad + " " + alumnos[1].telefono + " " + alumnos[1].edad + "\n" +
-              alumnos[2].apellidos + " " + alumnos[2].nombre + " " + alumnos[2].ciudad + " " + alumnos[2].telefono + " " + alumnos[2].edad + "\n" +
+              "Ordenar por apellidos: <br> " +
+              alumnos[0].apellidos + " " + alumnos[0].nombre + " " + alumnos[0].ciudad + " " + alumnos[0].telefono + " " + alumnos[0].edad + "<br>" +
+              alumnos[1].apellidos + " " + alumnos[1].nombre + " " + alumnos[1].ciudad + " " + alumnos[1].telefono + " " + alumnos[1].edad + "<br>" +
+              alumnos[2].apellidos + " " + alumnos[2].nombre + " " + alumnos[2].ciudad + " " + alumnos[2].telefono + " " + alumnos[2].edad + "<br>" +
               alumnos[3].apellidos + " " + alumnos[3].nombre + " " + alumnos[3].ciudad + " " + alumnos[3].telefono + " " + alumnos[3].edad);
     </script>
   </body>

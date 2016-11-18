@@ -1,0 +1,40 @@
+<!-- 
+    @Created on : 15-nov-2016, 10:56:51
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript" src="jquery-1.6.4.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".misdivs").bind("click", function (e) {
+          $(".misdivs").append($("h1"));
+        });
+      });
+
+    </script>
+    <style media="screen">
+      body{
+        background: #666;
+      }
+      h1{
+        color: #00cc00;
+      }
+      .misdivs {background : #623;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Titulo </h1>
+    <div class="misdivs">Mi div1 </div>
+    <div class="misdivs">Mi div2 </div>
+  </body>
+</html>
