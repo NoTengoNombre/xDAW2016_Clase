@@ -1,0 +1,52 @@
+<!-- 
+    @Created on : 21-nov-2016, 8:33:22
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : 
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="jquery-1.6.4.js">
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("span").hover(function () {
+          $(this).addClass("hilite");
+        }, function () {
+          $(this).removeClass("hilite");
+        });
+        $("span").click(function () {
+          $(this).fadeOut(1000, function () {
+            $("div").text("'" + $(this).text() + "' !Se ha desvanecido!'");
+          }); // funcion del Fade
+        }); // Funcion del Click
+
+        $("div").click(function () {
+          $("span").fadeIn(1000, function () {
+            $("div").text(" ");
+          });
+        });
+      });
+    </script>
+    <style media="screen">
+
+      span{
+        cursor:pointer;
+      }
+      span.hilite{
+        background: yellow;
+      }
+      div{
+        display:inline; /*Se pone inline para que al quitarlo se ocupe el hueco*/
+        color : red;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Encuentra los adjetivos</h3>
+    <p>La chaqueta <span>roja</span> el lo mejor cuando hace un tiempo <span>calido</span><div></div>¿verdad?</p>
+</body>
+</html>

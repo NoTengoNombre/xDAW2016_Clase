@@ -1,0 +1,44 @@
+<!-- 
+    @Created on : 21-nov-2016, 9:40:01
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="jquery-1.6.4.js">
+      $(document).ready(function () {
+        $(document.body).click(function () {
+          if ($("div:first").is(":hidden")) {
+            $("div").slideDown("slow");
+          } else {
+            $("div").hide();
+          }
+        });
+      });
+    </script>
+    <style>
+      div{
+        background: #ff9999;
+        margin: 3px;
+        width: 80px;
+        height: 140px;
+        display: none;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Los efectos no son solo para divs o spans</div>
+    <div>Tambien son para cualquier elemento</div>
+    <div><button id="hidr">Botones tambien</button></div>
+    <div><p>Aunque no esten incluidos en un div</p></div>
+
+  </body>
+</html>

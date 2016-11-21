@@ -1,0 +1,56 @@
+<!-- 
+    @Created on : 21-nov-2016, 8:33:22
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : 
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="jquery-1.6.4.js">
+    </script>
+    <script>
+      var ocultar = function () {
+        $(this).prev().hide("fast", ocultar);
+      };
+
+      var aparecer = function () {
+        $(this).next().show("fast", aparecer);
+      };
+
+      $(document).ready(function () {
+      $("#hidr").click(function () {
+      $("span:last-child").hide("fast", ocultar);
+      });
+              $("#showr").click(function () {
+      $("span:first-child").show(500, aparecer);
+      });
+
+    </script>
+    <style media="screen">
+      body {
+        background: #666;
+      }
+      span{
+        background: #def3ca;
+        padding: 3px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="hidr">Ocultar</button>
+    <button id="showr">Mostrar</button>
+    <div>
+      <span>Habia</span>
+      <span>una </span>
+      <span>vez </span>
+      <span>un </span>
+      <span>desarrollador </span>
+      <span>web </span>
+      <span>... </span>
+    </div>
+  </body>
+</html>

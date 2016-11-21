@@ -1,0 +1,52 @@
+<!-- 
+    @Created on : 21-nov-2016, 10:06:27
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script src="jquery-1.6.4.js">
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#right").click(function () { //Animacion del boton derecho
+          $(".block").animate({"left": "+=50px"}, "slow"); // va alejando a la derecha
+        });
+        $("#left").click(function () { //Animacion del boton izquierda
+          $(".block").animate({"left": "-= 50px"}, "slow"); // va alejando a la izquierda 
+        });
+        $("div").click(function () {
+          $("div").animate({// crece la pantalla
+            width: "70%", // referencia 70% de la pantalla
+            opacity: 0.5, /*atenuacion*/
+            marginLeft: "0.6in",
+            fontSize: "3em",
+            borderWidth: "10px"},
+                  1500);
+        });
+      });
+    </script>
+    <style>
+      div{
+        position: absolute;
+        background-color: #abc;
+        left: 50px;
+        width:90px;
+        height:90px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="left">&laquo;</button>
+    <button id="right">&raquo;</button>
+    <div class="block">Pulsa Aqui Tambien</div>
+  </body>
+</html>

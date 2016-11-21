@@ -1,0 +1,37 @@
+<!-- 
+    @Created on : 21-nov-2016, 10:06:27
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="shortcut icon" href="">
+    <script type="text/javascript" src="jquery-1.6.4.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("div").click(function () {
+          $("div.antes").slideUp(3000);
+          $("div.antes").fadeIn(8000);
+          $("div.despues").slideUp(3000);
+          $("div.despues").delay(8000);
+          $("div.despues").fadeIn(8000);
+        });
+      });
+    </script>
+    <style>
+      div.antes{background-color: #aac;}
+      div.despues{background-color: #abc;}
+    </style>
+  </head>
+  <body>
+    <h3> Pulsa en cualquiera de los texto </h3>
+    <div class="antes"><p>Antes</p></div>
+    <div class="despues"><p>Despues</p></div>
+    <div class="antes"><p>Antes</p></div>
+    <div class="despues"><p>Despues</p></div>
+  </body>
+</html>
