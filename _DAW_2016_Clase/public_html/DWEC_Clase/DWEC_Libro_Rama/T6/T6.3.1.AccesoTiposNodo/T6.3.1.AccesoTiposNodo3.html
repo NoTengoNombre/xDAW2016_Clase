@@ -1,0 +1,56 @@
+<!-- 
+    @Created on : 23-nov-2016, 8:55:25
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Titulo DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <script>
+
+      var obj_html = document.documentElement;
+
+
+
+      var divs = document.getElementsByTagName("div");
+
+      for (var i = 0; i < divs.length; i++) {
+        alert(divs[i]);
+      }
+
+
+      var divs1 = document.getElementsByTagName("div");
+      var primerDiv = div[0];
+      var enlaces = primerDiv.getElementsByTagName("a");
+
+      var divPrimero = document.getElementsByTagName("primero");
+
+      var pie = document.getElementById("pie");
+    </script>
+  </head>
+  <body>
+    <p id="parraf" style="color:blue">Prueba de texto</p>
+    <p>Parrafo DOM 1</p>
+    <p>Parrafo DOM segundo</p>
+    <p>Parrafo DOM tres</p>
+
+    <div id="pie">
+      <a href="" id="enlace1"></a>
+    </div>
+    <div>2
+      <br>
+      <a href="">Hola</a></div>
+    <hr>
+    <div>1</div>
+    <hr>
+    <div>3</div>
+    <hr>
+    <a href="" id="enlace2"></a>
+  </body>
+</html>

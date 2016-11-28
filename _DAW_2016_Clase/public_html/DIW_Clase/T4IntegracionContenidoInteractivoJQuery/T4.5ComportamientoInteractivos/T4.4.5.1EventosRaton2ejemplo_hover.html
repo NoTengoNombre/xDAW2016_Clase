@@ -1,0 +1,51 @@
+<!-- 
+    @Created on : 22-nov-2016, 8:41:39
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       : hover : mantenerse en el aire
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      ul{
+        margin-left: 20px;
+        color: blue;
+      }
+      li{
+        cursor:default;
+      }
+      span{
+        display:none;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("li#localizacion").hover(function () {
+          $("span#opcion_loc").show();
+        }, function () {
+          $("span#opcion_loc").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li id="localizacion">Localizacion</li>
+      <span id="opcion_loc">
+        <ul>
+          <li>Mapa</li>
+          <li>Direccion</li>
+          <li>Telefono</li>
+        </ul>
+      </span>
+      <li id="recetas">Recetas</li>
+    </ul>
+  </body>
+</html>

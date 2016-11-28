@@ -1,0 +1,59 @@
+<!-- 
+    @Created on : 22-nov-2016, 8:41:39
+    @Author     : admin
+    @Pag        :
+    @version    :
+    @TODO       :
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <style>
+      div.first{
+        position: relative;
+        background-color: #3f3;
+        left: 0px;
+        height: 400px;
+        width: 400px;
+      }
+
+      div.second{
+        position:relative;
+        background-color: #a3f;
+        top: 100px;
+        left:  100px;
+        height: 200px;
+        width: 200px;
+      }
+
+      p {
+        background: #33CC99;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready(function () {
+        var cuenta_enter = 0;
+        var cuenta_over = 0;
+        $("div.first").mouseleave()(function () {
+          $("p:first").text("con_mouseLeave " + cuenta_enter++);
+        });
+        $("div.first").mouseover(function () {
+          $("p:last").text("con_mouseOver " + cuenta_over++);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="first">
+      <div class="second">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
